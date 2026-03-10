@@ -33,14 +33,24 @@ ________________________________________
 
 ________________________________________
 When to Choose Which?
+
 Choose Playwright if:
 •	You are starting a new project from scratch.
+
 •	You are primarily testing modern web applications (React, Angular, Vue).
+
 •	You want fast execution, less flaky tests, and built-in auto-waiting.
+
 •	You need to test complicated scenarios involving multiple tabs, iframes, or mocking API responses.
+
 Choose Selenium if:
+
 •	You are working on a legacy project that already uses Selenium.
+
 •	Your team is heavily dependent on languages not supported by Playwright (e.g., Ruby).
+
 •	You absolutely must test on older or niche browsers (like Internet Explorer or Opera).
+
 •	You need seamless integration with Appium for native iOS/Android mobile application testing.
+
 
