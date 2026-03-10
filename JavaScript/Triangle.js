@@ -1,9 +1,19 @@
 const readline = require('readline');
 
+process.stdin.setEncoding('utf8');
+
+let data = '';
+process.stdin.on('data', chunk => { data += chunk; });
+process.stdin.on('end', () => {
+  console.log('You typed:', data.trim());
+});
+
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
+
+
 
 function classifyTriangle(a, b, c) {
     // Check if valid triangle
