@@ -15,20 +15,22 @@ Here is a detailed comparison of the two, followed by a difference table.
 •	Selenium struggles with intercepting and modifying network traffic natively (though Selenium 4 introduced some Chrome DevTools Protocol support).
 •	Playwright handles network interception natively. You can easily stub and mock API requests, block images from loading to speed up tests, or simulate offline modes.
 ________________________________________
-Comparison Table
-Feature	Playwright	Selenium
-Creator	Microsoft (2020)	Jason Huggins / Community (2004)
-Architecture	Bi-directional WebSockets	HTTP Requests via WebDriver
-Language Support	JavaScript/TypeScript, Python, Java, .NET	Java, Python, C#, Ruby, JavaScript, Kotlin, etc.
-Browser Support	Chromium, Firefox, WebKit (Safari engine)	Chrome, Firefox, Safari, Edge, IE, Opera
-Execution Speed	Very Fast (low overhead)	Slower (due to HTTP protocol overhead)
-Auto-Waiting	Built-in automatically for all actions	Manual (Requires Implicit / Explicit Waits)
-Handling Iframes	Excellent & native (no context switching needed)	Requires explicit context switching (switch_to)
-Shadow DOM Support	Native, transparent support	Supported in Selenium 4, but more complex to locate
-Network Interception	Native, easy API mocking & request modification	Limited / Complex (Relies on BiDi/CDP in Selenium 4)
-Multi-Tab/Multi-User	Native via lightweight "Browser Contexts"	Requires opening new heavy browser instances/windows
-Mobile Testing	Mobile browser emulation + experimental Android	Extensive native app testing via Appium integration
-Community & Resources	Rapidly growing, excellent modern documentation	Massive, highly mature, thousands of tutorials/fixes
+| Feature | Playwright | Selenium |
+|---------|-----------|----------|
+| Creator | Microsoft (2020) | Jason Huggins / Community (2004) |
+| Architecture | Bi-directional WebSockets | HTTP Requests via WebDriver |
+| Language Support | JavaScript/TypeScript, Python, Java, .NET | Java, Python, C#, Ruby, JavaScript, Kotlin, etc. |
+| Browser Support | Chromium, Firefox, WebKit (Safari engine) | Chrome, Firefox, Safari, Edge, IE, Opera |
+| Execution Speed | Very Fast (low overhead) | Slower (due to HTTP protocol overhead) |
+| Auto-Waiting | Built-in automatically for all actions | Manual (Requires Implicit / Explicit Waits) |
+| Handling Iframes | Excellent & native (no context switching needed) | Requires explicit context switching (switch_to) |
+| Shadow DOM Support | Native, transparent support | Supported in Selenium 4, but more complex to locate |
+| Network Interception | Native, easy API mocking & request modification | Limited / Complex (Relies on BiDi/CDP in Selenium 4) |
+| Multi-Tab/Multi-User | Native via lightweight "Browser Contexts" | Requires opening new heavy browser instances/windows |
+| Mobile Testing | Mobile browser emulation + experimental Android | Extensive native app testing via Appium integration |
+| Community & Resources | Rapidly growing, excellent modern documentation | Massive, highly mature, thousands of tutorials/fixes |
+
+
 ________________________________________
 When to Choose Which?
 Choose Playwright if:
